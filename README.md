@@ -43,6 +43,28 @@ We used free fonts from [Google Fonts](https://fonts.google.com/) and [Font Squi
 <a href="https://www.fontsquirrel.com/"><img src="./lab/fs.png" height="40"></a>
 <a href="https://fonts.google.com/"><img src="./lab/gf.png" height="40"></a>
 
+## Datasets
+Initially, we planned to use the [Adobe VFR dataset](https://www.dropbox.com/sh/o320sowg790cxpe/AADDmdwQ08GbciWnaC20oAmna?dl=0). Here are some sample images:<br /><img src="./lab/AdobeDataEx1.png" alt="Example1" height="40"/>
+<img src="./lab/AdobeDataEx2.png" alt="Example2" height="40"/>
+<img src="./lab/AdobeDataEx3.png" alt="Example3" height="40"/>
+<img src="./lab/AdobeDataEx4.png" alt="Example4" height="40"/><br />
+But we are faced with the following problems:
+1) Unbalanced dataset
+2) The lack of fonts we need in the dataset
+3) Inability to generate similar images of other fonts
+4) Lack of uniformity in the font (some of the images have [light letters on a dark background](./lab/AdobeDataEx4.png), some of the images have [dark letters on a light background](./lab/AdobeDataEx1.png), while the other part of the images have [letters color similar to background color](./lab/AdobeDataEx2.png) (for example, gray and dark gray).
+
+In this regard, it was decided to generate its own dataset as a set of dark letters on a white background:
+<br /><img src="./lab/OurDataEx.png" alt="ExampleSlab"/><br />
+With augmentation in the form of text tilt at small angles:
+<br /><img src="./lab/OurDataExAugmentation.png" alt="ExampleAugmentation"/><br />
+Example of distribution by Weight parameter taking into account balancing:
+<br /><img src="./lab/AugmentationHist.png" alt="AugmentedHistogram" width="565"/><br />
+
+## Network structure
+Example of a neural network structure for contrast classification (binary feature): 
+<br /><img src="./lab/Network structure.png" alt="ExampleSlab" width="565"/><br />
+
 ## About
 
 <a href="./lab/Index.ipynb"><img src="https://github.com/TyurinIvan/Font-Recognizer/raw/main/lab/Font-Recognizer.png"></a>
