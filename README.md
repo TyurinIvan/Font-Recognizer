@@ -50,7 +50,7 @@ Initially, we planned to use the [Adobe VFR dataset](https://www.dropbox.com/sh/
 <img src="./lab/AdobeDataEx4.png" alt="Example4" height="40"/><br />
 But we are faced with the following problems:
 1) Unbalanced dataset
-2) The lack of fonts we need in the dataset
+2) The lack of fonts [we need](./lab/FontsBckgr.png) in the dataset
 3) Inability to generate similar images of other fonts
 4) Lack of uniformity in the font (some of the images have [light letters on a dark background](./lab/AdobeDataEx4.png), some of the images have [dark letters on a light background](./lab/AdobeDataEx1.png), while the other part of the images have [letters color similar to background color](./lab/AdobeDataEx2.png) (for example, gray and dark gray).
 
